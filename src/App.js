@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Counter from "./Components/Counter"; // Functional component
+import Search from "./Components/Search"; // React Component
+import Toggle from "./Components/Toggle"; // React Pure Component
 
 function App() {
+  const title = "Hello World";
+  const menu = [
+    {
+      id: "1",
+      name: "All",
+      selected: true,
+    },
+    {
+      id: "2",
+      name: "Documentary",
+      selected: false,
+    },
+    {
+      id: "3",
+      name: "Comedy",
+      selected: false,
+    },
+    {
+      id: "4",
+      name: "Horror",
+      selected: false,
+    },
+    {
+      id: "5",
+      name: "crime",
+      selected: false,
+    },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>{title}</h2>
+      <Counter />
+      <Search />
+      <Toggle menu={menu} />
     </div>
   );
 }
