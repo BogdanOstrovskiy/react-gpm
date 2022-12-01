@@ -1,0 +1,28 @@
+.search {
+  display: flex;
+  width: 100%;
+
+  input {
+    flex-grow: 1;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+    border: none;
+    background: transparent;
+    margin-right: 0.5rem;
+    color: #fff;
+    font-size: 18px;
+  }
+
+  button {
+    background-color: #f65261;
+    padding: 1rem 2.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    &:disabled {
+      background-color: #555555;
+    }
+  }
+}

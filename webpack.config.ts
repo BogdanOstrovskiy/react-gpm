@@ -13,6 +13,10 @@ const webpackConfigCommon: Configuration = {
     main: path.resolve(__dirname, './src/index.tsx'),
   },
   resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src/'),
+      img: path.resolve(__dirname, './public/img/'),
+    },
     extensions: ['.tsx', '.ts', '.js'],
   },
   optimization: {
@@ -43,13 +47,10 @@ const webpackConfigCommon: Configuration = {
       {
         test: /\.(gif|png|jpg?g|svg)$/i,
         use: [
+          'file-loader',
           {
-            loader: 'file-loader',
-            options: {
-              name: 'img/[name].[ext]',
-            },
+            loader: 'image-webpack-loader',
           },
-          'image-webpack-loader',
         ],
       },
     ],

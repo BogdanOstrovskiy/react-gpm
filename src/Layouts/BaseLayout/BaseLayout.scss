@@ -1,0 +1,8 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  > main {
+    flex-grow: 1;
+  }
+}

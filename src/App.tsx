@@ -1,14 +1,18 @@
 import React from 'react';
 import './app.scss';
+import Home from './Containers/Home';
+import BaseLayout from './Layouts/BaseLayout/BaseLayout';
+import ErrorBoundary from './Components/ErrorBoundary/ErrorBoundary';
 
 function App() {
   return (
-    <div>
-      Test 1
-      <span>!</span>
-      Test 1
-      <span>!</span>
-    </div>
+    <BaseLayout>
+      <main>
+        <ErrorBoundary>
+          <Home />
+        </ErrorBoundary>
+      </main>
+    </BaseLayout>
   );
 }
 
