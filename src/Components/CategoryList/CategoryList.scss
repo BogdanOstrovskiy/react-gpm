@@ -1,0 +1,26 @@
+.category-list {
+  padding: 1rem 0 0;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  max-width: 1180px;
+  margin: 0;
+
+  &__item {
+    margin-right: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+
+    &:hover {
+      border-color: #f65261;
+    }
+
+    &_active {
+      border-color: #f65261;
+    }
+  }
+}

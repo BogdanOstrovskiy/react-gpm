@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
@@ -10,7 +11,11 @@
     "resolveJsonModule": true,
     "isolatedModules": false,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "paths": {
+      "@/*": ["src/*"],
+      "img/*": ["public/img/*"],
+    }
   },
   "exclude": ["node_modules", "build", "doc", "env", "public", "scripts"]
 }
